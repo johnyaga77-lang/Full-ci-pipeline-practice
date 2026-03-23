@@ -1,0 +1,23 @@
+name: Day 29 CI/CD Revision
+
+on:
+  push:
+    branches:
+      - ci-test   
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v3
+
+      - name: ⚙️ Run Simple CI Test
+        run: echo "CI is working ✅"
+
+      - name: 🐳 Build Docker Image
+        run: docker build -t my-app .
+
+      - name: 🚀 Deployment Step
+        run: echo "Deployment Successful 🚀"
