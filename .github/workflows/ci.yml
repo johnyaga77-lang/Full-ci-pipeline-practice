@@ -3,7 +3,7 @@ name: Day 29 CI/CD Revision
 on:
   push:
     branches:
-      - ci-test   
+      - main   
 
 jobs:
   build:
